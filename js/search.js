@@ -27,16 +27,7 @@ var searchFunc = function(path, search_id, content_id) {
                     var content_index = [];
                     var data_title = data.title.trim().toLowerCase();
                     var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                    // todo 目前这个地方有bug，先用本方法处理
-                    var data_urls = data.url.split('%2F');
-                    var data_url = 'https://li-shengming.github.io';
-                    console.log(data_urls);
-                    for(var i = 0, l = data_urls.length; i < l; i ++) {
-                        if(data_urls[i]!=''){
-                            data_url=data_url+'/'+data_urls[i];
-                        }
-                    }
-
+                    var data_url = data.url;
                     var index_title = -1;
                     var index_content = -1;
                     var first_occur = -1;
