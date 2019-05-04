@@ -380,24 +380,13 @@ div {
     padding-right: 0; } }
 
 blockquote, .stressed {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 2.5em 0;
-  padding: 0 0 0 50px;
-  color: #555;
-  border-left: none; }
-
-blockquote::before, .stressed-quote::before {
-  content: "\201C";
-  display: block;
-  font-family: times;
-  font-style: normal;
-  font-size: 48px;
-  color: #444;
-  font-weight: bold;
-  line-height: 30px;
-  margin-left: -50px;
-  position: absolute; }
+  margin: 1.5em 0;
+  padding: 1em;
+  border-radius: 3px;
+  border-left: .25em solid #0085a1;
+  background: #fdfdfd;
+  color: #555; }
 
 strong, b, em {
   font-weight: bold; }
