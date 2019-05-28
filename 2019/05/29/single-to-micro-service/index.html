@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Shengming Li's GitHub Page"><title>单体架构&amp;微服务架构 | 李升明</title><link rel="stylesheet" type="text/css" href="/public/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/public/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/public/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">单体架构&amp;微服务架构</h1><a id="logo" href="/public/.">李升明</a><p class="description">学习  总结  分享  提升</p></div><div id="nav-menu"><a class="current" href="/public/."><i class="fa fa-home"> 首页</i></a><a href="/public/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/public/timeline/"><i class="fa fa-history"> 历史</i></a><a href="/public/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">单体架构&amp;微服务架构</h1><div class="post-content"><h2 id="单体架构"><a href="#单体架构" class="headerlink" title="单体架构"></a>单体架构</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>一个项目包（war包）包含了应用的所有功能, 在没有出现微服务概念之前，基本上都是这种架构形式存在， 我们一般把程序打包成一个文件后，扔到tomcat等应用服务器中即可</p>
+<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点</p>
+<ul>
+<li>项目架构简单,前期开发的成本低,周期短</li>
+<li>功能都在本地，没有分布式的管理开销和调用开销</li>
+<li>运维简单<br>缺点</li>
+<li>开发效率低：所有的开发在一个项目改代码，递交代码相互等待，代码冲突不断</li>
+<li>代码维护难：代码功能耦合在一起，新人不知道何从下手</li>
+<li>部署不灵活：构建时间长，任何小修改必须重新构建整个项目，这个过程往往很长</li>
+<li>稳定性不高：一个微不足道的小问题，可以导致整个应用挂掉</li>
+<li>扩展性不够：单体应用只能作为一个整体进行扩展，无法结合业务模块的特点进行伸缩</li>
+<li>技术升级难：单体应用往往使用统一的技术平台或方案解决所有问题，团队的每个成员都必须使用相同的开发语言和框架，想要引入新的框架或技术平台会非常困难</li>
+</ul>
+<h2 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h2><h3 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>微服务架构是一种架构模式，它提倡将单一应用程序划分成一组小的服务，服务之间互相协调、互相配合，为用户提供最终价值。<br>每个服务运行在其独立的进程中，服务与服务间采用轻量级的通信机制互相协作（通常是基于HTTP协议的RESTful API）。<br>每个服务都围绕着具体业务进行构建，并且能够被独立的部署。 </p>
+<h3 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点</p>
+<ul>
+<li>开发简单</li>
+<li>技术栈灵活</li>
+<li>服务独立无依赖</li>
+<li>独立按需扩展</li>
+<li>可用性高</li>
+</ul>
+<p>缺点（挑战）</p>
+<ul>
+<li>系统架构复杂，对开发者要求高</li>
+<li>系统部署依赖</li>
+<li>服务间通信成本</li>
+<li>数据一致性</li>
+<li>系统集成测试</li>
+<li>多服务运维难度</li>
+<li>性能监控</li>
+<li>……</li>
+</ul>
+</div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="posttoc"><i class="fa fa-bars"> TOC </i><div class="stoc-article" id="stoc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#单体架构"><span class="toc-number">1.</span> <span class="toc-text">单体架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本介绍"><span class="toc-number">1.1.</span> <span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优缺点"><span class="toc-number">1.2.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微服务架构"><span class="toc-number">2.</span> <span class="toc-text">微服务架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本介绍-1"><span class="toc-number">2.1.</span> <span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优缺点-1"><span class="toc-number">2.2.</span> <span class="toc-text">优缺点</span></a></li></ol></li></ol></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/public/." rel="nofollow">李升明.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/public/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/public/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" src="/public/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/public/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/public/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/public/js/smartresize.js?v=0.0.0"></script></div></body></html>
